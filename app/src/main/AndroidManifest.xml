@@ -31,6 +31,9 @@
         <activity android:name=".crosswordgrid" android:label="Progrssdemo">
 
         </activity>
+        <activity android:name=".CircleAnimationDemo" android:label="CircleAnimation">
+
+        </activity>
     </application>
 
 </manifest>

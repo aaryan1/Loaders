@@ -324,6 +324,7 @@ public class ProgressWheel extends View {
             }
 
             canvas.drawArc(circleBounds, offset - 90, progress, false, barPaint);
+
         }
 
         if (mustInvalidate) {

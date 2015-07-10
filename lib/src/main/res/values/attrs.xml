@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
 	<declare-styleable name="CrosswordGrid">
 		<attr name="squareSide" format="integer" />
 	</declare-styleable>
 
-
-		<!--<declare-styleable name="CustompieChart">-->
-			<!--&lt;!&ndash;<attr name="showText" format="boolean" />&ndash;&gt;-->
-			<!--&lt;!&ndash;<attr name="labelPosition" format="enum">&ndash;&gt;-->
-				<!--&lt;!&ndash;<enum name="left" value="0"/>&ndash;&gt;-->
-				<!--&lt;!&ndash;<enum name="right" value="1"/>&ndash;&gt;-->
-			<!--&lt;!&ndash;</attr>&ndash;&gt;-->
-		<!--</declare-styleable>-->
 
 	<declare-styleable name="PieChart">
 		<attr name="autoCenterPointerInSlice" format="boolean"/>
@@ -29,6 +22,7 @@
 		<attr name="showingText" format="boolean"/>
 	</declare-styleable>
 
+
 	<declare-styleable name="ProgressWheel">
 		<attr name="matProg_progressIndeterminate" format="boolean" />
 		<attr name="matProg_barColor" format="color" />
@@ -41,5 +35,10 @@
 		<attr name="matProg_barWidth" format="dimension" />
 		<attr name="matProg_linearProgress" format="boolean" />
 	</declare-styleable>
+
+
+    <declare-styleable name="CircleAnimation">
+        <attr name="rectside" format="integer" />
+    </declare-styleable>
 
 </resources>
