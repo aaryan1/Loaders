@@ -7,6 +7,8 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
+import android.util.Log;
+
 
 import teamdapsr.loaders.lib.utils.MeasureUtils;
 
@@ -24,7 +26,9 @@ public class CircleAnimation extends View{
     private int  circleradius = 0;
     private int startArc = 0;
     private int endArc = 0;
-     boolean big = true ,small = false ,medium = false;
+    private int flag = 1;
+    private int TempS ,TempE;
+
     public CircleAnimation(Context context, int rectside) {
         super(context);
         this.rectside = rectside;
@@ -108,16 +112,6 @@ public class CircleAnimation extends View{
 
         canvas.drawArc(rect1, startArc, endArc, false, mSquarePaint);
 
-
-       /* try
-        {
-            Thread.sleep(10);
-        }
-        catch (InterruptedException e)
-        {
-            e.printStackTrace();
-        }*/
-
         updateBounds(0);
 
     }
@@ -126,24 +120,61 @@ public class CircleAnimation extends View{
     protected void updateBounds(int radius)
     {
 
-       // startArc = startArc - 2;
 
+        int s = Math.abs(startArc);
+        int e = Math.abs(endArc);
 
-        if (endArc == 135){
-
-            int tempend = endArc;
-            endArc = startArc;
-            startArc  = tempend;
-
+        if(s == 290 || e == 290){
+            flag =1;
+            try
+            {
+                Thread.sleep(5);
+            }
+            catch (InterruptedException ee)
+            {
+                ee.printStackTrace();
+            }
         }
-        if(endArc == 360 || endArc == startArc){
 
-            startArc = 0;
-            endArc = 0;
+        if(s == 0 || e == 0){
+            flag =2;
         }
 
-        endArc = endArc +5;
-        startArc = startArc + 2;
+        if(flag ==1){
+            Log.i("flag", "11111111");
+
+
+            try
+            {
+                Thread.sleep(5);
+            }
+            catch (InterruptedException ee)
+            {
+                ee.printStackTrace();
+            }
+
+            startArc = startArc + 10;
+            endArc = endArc + 10;
+            Log.i("value" , ""+startArc +"  "+endArc);
+        }
+
+        if(flag ==2){
+            Log.i("flag", "222222222");
+
+            try
+            {
+                Thread.sleep(5);
+            }
+            catch (InterruptedException ee)
+            {
+                ee.printStackTrace();
+            }
+
+            startArc = startArc + 10;
+            endArc = endArc - 10;
+            Log.i("value" , ""+startArc +"  "+endArc);
+        }
+
 
         invalidate();
 
