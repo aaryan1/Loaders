@@ -126,14 +126,7 @@ public class CircleAnimation extends View{
 
         if(s == 290 || e == 290){
             flag =1;
-            try
-            {
-                Thread.sleep(5);
-            }
-            catch (InterruptedException ee)
-            {
-                ee.printStackTrace();
-            }
+
         }
 
         if(s == 0 || e == 0){
@@ -146,7 +139,7 @@ public class CircleAnimation extends View{
 
             try
             {
-                Thread.sleep(5);
+                Thread.sleep(10);
             }
             catch (InterruptedException ee)
             {
@@ -160,15 +153,6 @@ public class CircleAnimation extends View{
 
         if(flag ==2){
             Log.i("flag", "222222222");
-
-            try
-            {
-                Thread.sleep(5);
-            }
-            catch (InterruptedException ee)
-            {
-                ee.printStackTrace();
-            }
 
             startArc = startArc + 10;
             endArc = endArc - 10;
